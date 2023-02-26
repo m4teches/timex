@@ -50,14 +50,7 @@ class TimexServiceProvider extends PluginServiceProvider
             ->hasMigration('create_timex_tables')
             ->hasCommands([
                 MakeAttachmentsTableCommand::class
-            ])
-            ->hasInstallCommand(function (InstallCommand $command){
-                $command
-                    ->publishConfigFile()
-                    ->publishMigrations()
-                    ->askToRunMigrations()
-                    ->askToStarRepoOnGitHub('buildix/timex');
-            });
+            ]);
     }
 
     public function boot()

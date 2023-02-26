@@ -78,7 +78,7 @@ class Month extends Component
         $currMonthDays = $this->currMonth;
         $weekDays = $weekDays
             ->map(function ($month) use ($currMonthDays) {
-                $month['group'] = uuid_create();
+                $month['group'] = uniqid();
                 $month['dayName'] = $month['dayName'];
                 $month['days'] = $currMonthDays
                     ->filter(function ($currMonthDays) use ($month) {

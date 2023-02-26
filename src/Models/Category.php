@@ -7,7 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Category extends Model
 {
-    use HasUuids;
 
     protected $guarded = [];
     public $timestamps = false;

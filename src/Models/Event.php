@@ -11,7 +11,6 @@ use Spatie\Permission\PermissionRegistrar;
 
 class Event extends Model
 {
-    use HasUuids;
     use TimexTrait;
 
     protected $guarded = [];
